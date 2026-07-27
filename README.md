@@ -303,7 +303,12 @@ anchors, and requests review before accepting evidence.
 
 ## Releases
 
-CI tests Linux, Windows, and macOS. Tags matching `v*` prepare Windows and
-Linux executable archives, package the README and license, generate SHA-256
-checksums, and publish one GitHub Release after both builds succeed. The
-release workflow can also prepare an existing tag manually.
+CI tests Linux, Windows, and macOS. Tags matching `v*` prepare executable
+archives for Linux (x86_64), Windows (x86_64), and macOS (arm64 and x86_64),
+package the README and license, generate SHA-256 checksums, and publish one
+GitHub Release after every build succeeds. The release workflow can also
+prepare an existing tag manually.
+
+The macOS binaries are not signed or notarized: clear the Gatekeeper
+quarantine after downloading (`xattr -d com.apple.quarantine`), or prefer
+`cargo install`.
