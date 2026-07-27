@@ -24,6 +24,49 @@ engineering relationships that are otherwise easy to lose:
 - which tests verify a claim;
 - and the exact source span supporting every relationship.
 
+A neighborhood query returns compact, reviewed facts:
+
+```bash
+project-graph --project . --json neighbors protocol:serve --depth 1
+```
+
+```json
+{
+  "center": {"id": "protocol:serve", "type": "Interface", "name": "Serve message"},
+  "nodes": [
+    {"id": "symbol:sendServe", "type": "Symbol", "name": "sendServe"},
+    {"id": "invariant:server-authoritative-serve", "type": "Invariant",
+     "name": "Serves are granted only by the server"},
+    {"id": "test:serve-round-trip", "type": "Verification", "name": "serve round trip"}
+  ],
+  "edges": [
+    {"source_id": "symbol:sendServe", "predicate": "SENDS", "target_id": "protocol:serve"},
+    {"source_id": "protocol:serve", "predicate": "GUARDED_BY",
+     "target_id": "invariant:server-authoritative-serve"},
+    {"source_id": "protocol:serve", "predicate": "VERIFIED_BY",
+     "target_id": "test:serve-round-trip"}
+  ]
+}
+```
+
+(Trimmed; real rows also carry descriptions, review state, and confidence.)
+
+That output drops straight into an LLM prompt as trusted context:
+
+```text
+Reviewed project knowledge for this task:
+<paste the JSON above>
+
+We want clients to retry serve requests when the connection drops.
+What must not break, and which test should catch a regression?
+```
+
+The model can now answer from recorded relationships — the retry must respect
+the server-authoritative invariant, and `test:serve-round-trip` is the
+regression gate — instead of inferring couplings from a source search. Follow
+with `evidence protocol:serve` when the answer should quote the exact source
+spans.
+
 Evidence uses stable source-text anchors rather than line numbers. Moving an
 unchanged block does not invalidate it; changing or removing the block does.
 
