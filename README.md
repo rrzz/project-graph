@@ -24,7 +24,14 @@ engineering relationships that are otherwise easy to lose:
 - which tests verify a claim;
 - and the exact source span supporting every relationship.
 
-A neighborhood query returns compact, reviewed facts:
+Evidence uses stable source-text anchors rather than line numbers. Moving an
+unchanged block does not invalidate it; changing or removing the block does.
+
+## Example: from query to LLM context
+
+Everything below is illustrative — a small made-up graph for a game's
+serve protocol; the same shapes come from any real project. A neighborhood
+query returns compact, reviewed facts:
 
 ```bash
 project-graph --project . --json neighbors protocol:serve --depth 1
@@ -66,9 +73,6 @@ the server-authoritative invariant, and `test:serve-round-trip` is the
 regression gate — instead of inferring couplings from a source search. Follow
 with `evidence protocol:serve` when the answer should quote the exact source
 spans.
-
-Evidence uses stable source-text anchors rather than line numbers. Moving an
-unchanged block does not invalidate it; changing or removing the block does.
 
 ## Install
 
