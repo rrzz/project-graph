@@ -304,9 +304,10 @@ anchors, and requests review before accepting evidence.
 ## Releases
 
 CI tests Linux, Windows, and macOS. Tags matching `v*` prepare executable
-archives for Linux (x86_64), Windows (x86_64), and macOS (arm64 and x86_64),
-package the README and license, generate SHA-256 checksums, and publish one
-GitHub Release after every build succeeds. The release workflow can also
+archives for Linux (x86_64 and arm64 glibc, plus a static x86_64 musl build
+for containers and older distributions), Windows (x86_64 and arm64), and
+macOS (arm64 and x86_64), package the README and license, generate SHA-256
+checksums, and publish one GitHub Release after every build succeeds. The release workflow can also
 prepare an existing tag manually.
 
 The macOS binaries are not signed or notarized: clear the Gatekeeper

@@ -25,6 +25,15 @@ jobs:
           - os: windows-latest
             target: x86_64-pc-windows-msvc
             package: project-graph-x86_64-pc-windows-msvc.zip
+          - os: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-gnu
+            package: project-graph-aarch64-linux-gnu.tar.gz
+          - os: ubuntu-latest
+            target: x86_64-unknown-linux-musl
+            package: project-graph-x86_64-linux-musl.tar.gz
+          - os: windows-11-arm
+            target: aarch64-pc-windows-msvc
+            package: project-graph-aarch64-pc-windows-msvc.zip
           - os: macos-latest
             target: aarch64-apple-darwin
             package: project-graph-aarch64-apple-darwin.tar.gz
@@ -42,6 +51,9 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           key: release-${{ matrix.target }}
+      - name: Install musl toolchain
+        if: contains(matrix.target, 'musl')
+        run: sudo apt-get update && sudo apt-get install -y musl-tools
       - run: cargo build --release --locked --target ${{ matrix.target }}
 
       - name: Package Unix
