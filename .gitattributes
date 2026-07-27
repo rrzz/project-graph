@@ -1,0 +1,4 @@
+# Sources are LF everywhere; rustfmt enforces newline_style and Windows
+# runners must not convert on checkout.
+* text=auto eol=lf
+*.png binary

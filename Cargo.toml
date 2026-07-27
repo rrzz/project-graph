@@ -1,0 +1,58 @@
+[package]
+name = "project-knowledge-graph"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.83"
+description = "A provenance-first engineering knowledge graph for any repository"
+license = "MIT"
+readme = "README.md"
+documentation = "https://docs.rs/project-knowledge-graph"
+keywords = ["knowledge-graph", "sqlite", "provenance", "developer-tools"]
+categories = ["command-line-utilities", "development-tools"]
+include = [
+    "/src/**",
+    "/tests/**",
+    "/prompts/**",
+    "/.claude/**",
+    "/.project-graph/.gitignore",
+    "/.project-graph/assertions/**",
+    "/.project-graph/config.json",
+    "/.project-graph/evidence-lock.json",
+    "/.project-graph/gold-questions.json",
+    "/Cargo.toml",
+    "/Cargo.lock",
+    "/README.md",
+    "/LICENSE",
+    "/CHANGELOG.md",
+    "/CONTRIBUTING.md",
+    "/SECURITY.md",
+    "/rustfmt.toml",
+]
+
+[[bin]]
+name = "project-graph"
+path = "src/main.rs"
+
+[dependencies]
+chrono = { version = "=0.4.39", default-features = false, features = ["clock", "serde"] }
+clap = { version = "=4.5.23", features = ["derive"] }
+glob = "=0.3.2"
+globset = "=0.4.15"
+rusqlite = { version = "=0.32.1", features = ["bundled"] }
+serde = { version = "=1.0.217", features = ["derive"] }
+serde_json = "=1.0.134"
+sha2 = "=0.10.8"
+thiserror = "=2.0.9"
+
+[dev-dependencies]
+tempfile = "=3.13.0"
+
+[profile.release]
+lto = "thin"
+strip = "symbols"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = "warn"

@@ -1,0 +1,3 @@
+cache/
+# Raw worker findings are disposable reconciliation input, not graph truth.
+candidates/

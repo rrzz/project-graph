@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "question": "What establishes that JSONL assertions, not SQLite, are authoritative?",
+      "seeds": ["invariant:portable-source-truth"],
+      "depth": 3,
+      "direction": "both",
+      "expected_nodes": ["store:assertions", "store:sqlite", "symbol:build-database", "flow:ingestion"]
+    },
+    {
+      "question": "How is evidence selected, protected, accepted, and checked for drift?",
+      "seeds": ["component:evidence"],
+      "depth": 3,
+      "direction": "both",
+      "expected_nodes": ["symbol:snapshot-evidence", "symbol:write-lock", "symbol:audit-evidence", "store:evidence-lock", "invariant:anchor-evidence", "invariant:blocked-before-read", "invariant:root-containment", "invariant:explicit-acceptance"]
+    },
+    {
+      "question": "Why can a failed index build not destroy the last working database?",
+      "seeds": ["invariant:atomic-index"],
+      "depth": 2,
+      "direction": "both",
+      "expected_nodes": ["symbol:build-database", "component:sqlite", "store:sqlite"]
+    },
+    {
+      "question": "How do read-only queries resolve aliases and traverse the graph?",
+      "seeds": ["flow:query"],
+      "depth": 3,
+      "direction": "both",
+      "expected_nodes": ["store:sqlite", "symbol:connect-database", "invariant:readonly-query", "symbol:resolve-node", "symbol:traverse", "symbol:shortest-path"]
+    },
+    {
+      "question": "How are agent workers prevented from directly writing reviewed facts?",
+      "seeds": ["invariant:single-writer", "invariant:candidate-review"],
+      "depth": 3,
+      "direction": "both",
+      "expected_nodes": ["prompt:worker", "prompt:bootstrap", "skill:build-project-graph", "flow:agent-bootstrap"]
+    },
+    {
+      "question": "What builds and publishes public executables?",
+      "seeds": ["automation:release"],
+      "depth": 3,
+      "direction": "both",
+      "expected_nodes": ["file:release", "flow:release", "component:cli"]
+    },
+    {
+      "question": "Which tests protect anchor movement, stale detection, blocked paths, and graph retrieval?",
+      "seeds": ["verification:core-tests"],
+      "depth": 3,
+      "direction": "both",
+      "expected_nodes": ["file:tests", "invariant:anchor-evidence", "invariant:blocked-before-read", "file:core", "automation:ci"]
+    },
+    {
+      "question": "How does a supplied identifier resolve when it could be an ID, alias, or partial name?",
+      "seeds": ["invariant:resolver-precedence"],
+      "depth": 2,
+      "direction": "both",
+      "expected_nodes": ["invariant:resolver-precedence", "symbol:resolve-node", "component:query"]
+    },
+    {
+      "question": "What bounds neighborhood, path, and impact retrieval?",
+      "seeds": ["invariant:bounded-graph-retrieval", "flow:impact-analysis"],
+      "depth": 2,
+      "direction": "both",
+      "expected_nodes": ["invariant:bounded-graph-retrieval", "symbol:traverse", "symbol:shortest-path", "flow:impact-analysis", "component:cli"]
+    },
+    {
+      "question": "What does a passing gold evaluation guarantee?",
+      "seeds": ["invariant:gold-recall-coverage"],
+      "depth": 2,
+      "direction": "both",
+      "expected_nodes": ["invariant:gold-recall-coverage", "symbol:evaluate-gold", "component:evaluation", "store:gold"]
+    },
+    {
+      "question": "How does building expose accepted and changed evidence state?",
+      "seeds": ["invariant:build-surfaces-evidence-status"],
+      "depth": 2,
+      "direction": "both",
+      "expected_nodes": ["invariant:build-surfaces-evidence-status", "symbol:build-database", "store:evidence-lock", "store:sqlite"]
+    },
+    {
+      "question": "How does a large-repository crawl keep worker findings separate from reviewed graph truth?",
+      "seeds": ["flow:orchestrated-crawl"],
+      "depth": 3,
+      "direction": "both",
+      "expected_nodes": ["skill:crawl-project-graph", "store:candidate-reports", "invariant:candidate-isolation", "invariant:candidate-review", "invariant:single-writer"]
+    },
+    {
+      "question": "Who may reconcile frontier architectural findings, and what happens to unresolved disagreement?",
+      "seeds": ["flow:frontier-reconciliation"],
+      "depth": 3,
+      "direction": "both",
+      "expected_nodes": ["skill:frontier-project-graph", "store:candidate-reports", "invariant:candidate-review", "invariant:single-writer", "invariant:unresolved-frontier-disagreement"]
+    }
+  ]
+}

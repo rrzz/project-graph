@@ -1,0 +1,746 @@
+{
+  "version": 2,
+  "updated_at": "2026-07-26T18:10:23Z",
+  "evidence": {
+    ".claude/skills/build-project-graph/SKILL.md#anchor-12f1555b1ca0dcba262a": {
+      "path": ".claude/skills/build-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "## Survey with agents",
+        "end_anchor": "## Resolve and assemble",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "8ca03fada633944e1418437a891453922ba19239ff1a24915d2dbc50709401e6"
+    },
+    ".claude/skills/build-project-graph/SKILL.md#anchor-461f657c06669fe92a55": {
+      "path": ".claude/skills/build-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "Coverage workers may write isolated candidate files, but must not edit source or",
+        "end_anchor": "avoid conflicting IDs and vocabularies.",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "7b3ad09d72744c7de7130e834c0b387c6d935dbbf2d1801d722f92e75ebaaca2"
+    },
+    ".claude/skills/build-project-graph/SKILL.md#anchor-8b972b428d38df610480": {
+      "path": ".claude/skills/build-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "Do not promote candidates solely because their JSON is valid. Personally",
+        "end_anchor": "inspect the cited source and the complete assertion.",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "18f07dc7d3ec033e1ab2a78d11703aec94bf8c6b664c16be59a7ed4212a02d6b"
+    },
+    ".claude/skills/build-project-graph/SKILL.md#anchor-8ce11746d6fb592a1681": {
+      "path": ".claude/skills/build-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "name: build-project-graph",
+        "end_anchor": "# Build Project Graph",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "8d58aa2f4574eb25375428e9e5fe35d83e2070d446901ee696e18b2918de259f"
+    },
+    ".claude/skills/crawl-project-graph/SKILL.md#anchor-0cdf6db4014f75facfd9": {
+      "path": ".claude/skills/crawl-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "- The orchestrator is the only agent that writes assertions, resolves IDs, or",
+        "end_anchor": "  changes review status.",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "d58d4b2623e79fd368f74deb0cc4fed1f95ea4c4372fc398802d13d6dffe9a09"
+    },
+    ".claude/skills/crawl-project-graph/SKILL.md#anchor-550002fe68c8c77bf0d2": {
+      "path": ".claude/skills/crawl-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "name: crawl-project-graph",
+        "end_anchor": "# Crawl Project Graph",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "98d1d1a35ba0553a10af9cc5ecfb18635442db3d59b17c5955bb1c35999068c5"
+    },
+    ".claude/skills/crawl-project-graph/SKILL.md#anchor-563cdfb278194ac68ff7": {
+      "path": ".claude/skills/crawl-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "Use this as the canonical large-repository workflow.",
+        "end_anchor": "not the entire repository.",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "a179cde0e9a7d3dcfc8520c30203778817cb3be1ec1b7e92ab7eb4c2e5729e37"
+    },
+    ".claude/skills/crawl-project-graph/SKILL.md#anchor-f3f8cb20fd3b65d10574": {
+      "path": ".claude/skills/crawl-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "- Coverage workers are read-only with respect to repository source, but write",
+        "end_anchor": "  only isolated `candidate` graph findings.",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "d68f4c065656981ab65796fc79ed7374a02676978d88e6f9baa9e8d9ee80ac90"
+    },
+    ".claude/skills/crawl-project-graph/references/workflow.md#anchor-1df3f1a128690950ac62": {
+      "path": ".claude/skills/crawl-project-graph/references/workflow.md",
+      "selector": {
+        "start_anchor": "Use a bounded concurrency level. As workers finish, have them write raw JSON",
+        "end_anchor": "not raw model output, are the committed source of truth.",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "715be80a520768cc5d875ac4d13cf99b1bc10be4747c7979f013bfc0454a77f9"
+    },
+    ".claude/skills/frontier-project-graph/SKILL.md#anchor-0f94958fe8e1d7457356": {
+      "path": ".claude/skills/frontier-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "name: frontier-project-graph",
+        "end_anchor": "# Frontier Project Graph",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "699a6bd8f0f0011d17d59fdef44cd6c80037b1e724ee535da773d0c856dc7f84"
+    },
+    ".claude/skills/frontier-project-graph/SKILL.md#anchor-2094896c1473cd630c8f": {
+      "path": ".claude/skills/frontier-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "- The orchestrator alone resolves IDs, writes assertions, changes review state,",
+        "end_anchor": "  builds SQLite, and requests/records acceptance.",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "79ef83b05073601f38034888f29f4f24bafe7ed86bf71f62013e24edc4ced679"
+    },
+    ".claude/skills/frontier-project-graph/SKILL.md#anchor-4dfb41469254439aa0bf": {
+      "path": ".claude/skills/frontier-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "## Required outcome",
+        "end_anchor": "motivated the survey.",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "48fdce5efcff7da3c84df28a1339bd5f6abfa361f656ce8216bf1a213ce93889"
+    },
+    ".claude/skills/frontier-project-graph/SKILL.md#anchor-9175965e0753caf97abc": {
+      "path": ".claude/skills/frontier-project-graph/SKILL.md",
+      "selector": {
+        "start_anchor": "- Frontier workers are source-read-only and write only isolated `candidate`",
+        "end_anchor": "  findings.",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "fffc0b03052591b0fc23ca4de232bb512adf6fc19bde8625eb1952783521d330"
+    },
+    ".claude/skills/frontier-project-graph/references/workflow.md#anchor-4e38f76f28d4ad8fbe84": {
+      "path": ".claude/skills/frontier-project-graph/references/workflow.md",
+      "selector": {
+        "start_anchor": "5. Record unresolved disagreement as a coverage gap, decision candidate, or",
+        "end_anchor": "   investigation—not an asserted fact.",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "cff6dc60e38cc4efbf34ea145ca89db823ad6691725e471083880b4731150319"
+    },
+    ".claude/skills/frontier-project-graph/references/workflow.md#anchor-89c4072da028c50565d7": {
+      "path": ".claude/skills/frontier-project-graph/references/workflow.md",
+      "selector": {
+        "start_anchor": "Save raw reports under `.project-graph/candidates/frontier-<question-id>.json`.",
+        "end_anchor": "They are local reconciliation input and must remain outside assertion globs.",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "60d48398cc65a0a5277560dd32cef0862ad1f98ed2f24c055131363de477cc50"
+    },
+    ".github/workflows/ci.yml#anchor-2096952be07cd7b3516a": {
+      "path": ".github/workflows/ci.yml",
+      "selector": {
+        "start_anchor": "        os: [ubuntu-latest, windows-latest, macos-latest]",
+        "end_anchor": "      - run: cargo test --all-features",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "0d87a554521070f669f1e141b8e64736601007b0116c5e74da14a005fce6535b"
+    },
+    ".github/workflows/ci.yml#anchor-669b9ecf70aef2f24052": {
+      "path": ".github/workflows/ci.yml",
+      "selector": {
+        "start_anchor": "name: CI",
+        "end_anchor": "      - run: cargo test --all-features",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "6a3451e73da42d301e8ff5311639dd2ffd3283c6bff3e7f2ba658b9c8d5ee900"
+    },
+    ".github/workflows/ci.yml#anchor-a83b9126ef717c57c236": {
+      "path": ".github/workflows/ci.yml",
+      "selector": {
+        "start_anchor": "      - run: cargo fmt --check",
+        "end_anchor": "      - run: cargo test --all-features",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "03e3512aed2e382a73da46b31d4957bd921b47cd13a9ba4b07b3b55ef96c8ce9"
+    },
+    ".github/workflows/release.yml#anchor-24b6206b1e37f6b38691": {
+      "path": ".github/workflows/release.yml",
+      "selector": {
+        "start_anchor": "name: Release executables",
+        "end_anchor": "  publish:",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "e1f60b866cb094eefa9b3d63ea3b64e07e4c0c3dcc8647f13e37d07993b6dd52"
+    },
+    ".github/workflows/release.yml#anchor-68c4ccb9ac7e387385d2": {
+      "path": ".github/workflows/release.yml",
+      "selector": {
+        "start_anchor": "      - name: Package Linux",
+        "end_anchor": "          if-no-files-found: error",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "3adc5287fbd7b8decbf2d1e190ca38fd7a1f0e981b577b38b284f32fdf7f7a22"
+    },
+    ".github/workflows/release.yml#anchor-9356b4e29793041ed729": {
+      "path": ".github/workflows/release.yml",
+      "selector": {
+        "start_anchor": "  build:",
+        "end_anchor": "  publish:",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "6d2beae48dafedb94874a2bd1381444cf14890f257d98a8280e0e3e71d0f8f16"
+    },
+    ".project-graph/.gitignore#anchor-98d4377a8f8fdcf80129": {
+      "path": ".project-graph/.gitignore",
+      "selector": {
+        "start_anchor": "# Raw worker findings are disposable reconciliation input, not graph truth.",
+        "end_anchor": "candidates/",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "00ab82030828f15253f4200df3d1f90e6ba7bf5f63861366e386766a90195c88"
+    },
+    "README.md#anchor-312fd81a704f73c23e95": {
+      "path": "README.md",
+      "selector": {
+        "start_anchor": "project-graph --project /path/to/repo validate",
+        "end_anchor": "project-graph --project /path/to/repo eval",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "e4a6165d760246262997a7a4c519eb57bd9461b3dc0917abed37f20485be8356"
+    },
+    "README.md#anchor-63a13c6887e09e0e2884": {
+      "path": "README.md",
+      "selector": {
+        "start_anchor": "`project-graph lock` records the accepted SHA-256",
+        "end_anchor": "lock without trusting or rebuilding SQLite.",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "465922b757f1ed76177a6f911175b61b22b3cc90512f9933ae0ea04e1e1e875f"
+    },
+    "README.md#anchor-7eb813f4ac8e90134976": {
+      "path": "README.md",
+      "selector": {
+        "start_anchor": "Reviewed JSONL assertions are the portable source of",
+        "end_anchor": "index that can always be rebuilt.",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "b59c05611ed2fb393506606d1872d4b7d066a6fc6358c90839db83a1fab2ec4e"
+    },
+    "README.md#anchor-83f2ef377417a662f6c4": {
+      "path": "README.md",
+      "selector": {
+        "start_anchor": "## Agent-assisted bootstrap",
+        "end_anchor": "## Releases",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "70d0bc1bc4e075b8a903611857b8211998ee54e6f0e26c087833cfebd8c13a42"
+    },
+    "README.md#anchor-fecece12b2929114ff56": {
+      "path": "README.md",
+      "selector": {
+        "start_anchor": "`project-graph` is a local, provenance-first engineering knowledge graph for",
+        "end_anchor": "It is language-, framework-, graph-database-, model-provider-, and",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "49489c60d99265790a31ed6bde2faf9230e2136cb6388112fe8dd0f5331eda6b"
+    },
+    "prompts/bootstrap-project-graph.md#anchor-25f0e727592ea1528a7e": {
+      "path": "prompts/bootstrap-project-graph.md",
+      "selector": {
+        "start_anchor": "## Parallel survey",
+        "end_anchor": "Workers must not edit graph files. The primary agent owns resolution and all",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "14a0361f413d73768b04ab67c25f18638a59dc85bee95891b07f3f2bef51260d"
+    },
+    "prompts/bootstrap-project-graph.md#anchor-7fa7ef8bb934d7757679": {
+      "path": "prompts/bootstrap-project-graph.md",
+      "selector": {
+        "start_anchor": "# Bootstrap an evidence-locked project graph",
+        "end_anchor": "## Completion report",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "73bd729c39b5c6d10772969c1a3f4e3ff88b1fb6484e54503d9740c141a6d589"
+    },
+    "prompts/bootstrap-project-graph.md#anchor-ac71a63ae4237ccc6b16": {
+      "path": "prompts/bootstrap-project-graph.md",
+      "selector": {
+        "start_anchor": "## Synthesis",
+        "end_anchor": "## Completion report",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "a81351990975e910c1de242e015f73cc0e2ab8d4328b21b5ac5f59bfea0289cc"
+    },
+    "prompts/survey-worker.md#anchor-46ee1c24fd28fd5c4b47": {
+      "path": "prompts/survey-worker.md",
+      "selector": {
+        "start_anchor": "Use the normal assertion shapes for `nodes`, `edges`, and `aliases`. Mark every",
+        "end_anchor": "  \"review\": \"candidate\"",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "da2dfa66a0aead5cf5a413a1ecd51c940ce50e0ab12f6420f96c8a677caa18de"
+    },
+    "prompts/survey-worker.md#anchor-854e1869b1d3c3b56046": {
+      "path": "prompts/survey-worker.md",
+      "selector": {
+        "start_anchor": "# Project graph coverage worker",
+        "end_anchor": "  \"coverage_gaps\": []",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "8ba72aab55321944a9a315d556498f786c7f8253c15c78bfafb3c4c19a7ac725"
+    },
+    "prompts/survey-worker.md#anchor-e9651608d6bc71de8c26": {
+      "path": "prompts/survey-worker.md",
+      "selector": {
+        "start_anchor": "Perform coverage work for the assigned repository concern. Do not edit source",
+        "end_anchor": "canonical graph assertions.",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "7a3c3ff0a05e33242c6639787fff5d74db538ab7876c19587af7f14abcfe513c"
+    },
+    "src/core.rs#anchor-0525c910c992ce71b573": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "let connection = Connection::open_with_flags(",
+        "end_anchor": "Ok(connection)",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "c121ef6821e3006703e34be4eea7a9107244de07f13f95c5f3f85322952dab36"
+    },
+    "src/core.rs#anchor-0871b955e5a60e9cc37c": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn evaluate_gold(root: &Path, connection: &Connection) -> Result<Value> {",
+        "end_anchor": "fn mermaid_escape(value: &str) -> String {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "7af70d04cbb5650c9603a75beb8b1e72e7a78cf1e9f3e67d8eeb07efcc71dbde"
+    },
+    "src/core.rs#anchor-2827d6e9fcd1a43e1962": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "let lock = load_lock(root)?;",
+        "end_anchor": "for loaded in records {",
+        "start_occurrence": 1,
+        "end_occurrence": 2
+      },
+      "span_sha256": "77d45359ed9c6e927f7424b874cabf9b6caf0c68ee894bcf7049170ad5c47d34"
+    },
+    "src/core.rs#anchor-351da65c02ce2742d480": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "if !resolved.starts_with(&root) {",
+        "end_anchor": "Ok(resolved)",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "ffb6a6ae44c904e63d9da1827a02441db9a7ee9ad47a1a4cbf388b683c9155cd"
+    },
+    "src/core.rs#anchor-47155eb0eae89f97c5a1": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn resolve_node(connection: &Connection, value: &str) -> Result<Value> {",
+        "end_anchor": "let like = format!(\"%{value}%\");",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "74625680815d5621e8239c794791295df3403470586824734b9096c7a758a9ff"
+    },
+    "src/core.rs#anchor-4e6a4404e14efdc8a066": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn write_lock(root: &Path, config: &Config, records: &[LoadedRecord]) -> Result<usize> {",
+        "end_anchor": "for evidence in loaded.record.evidence() {",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "9812278c5fdf020bf4039829d321b1ec841b168bc5e0adcd75e07dd451e22ae0"
+    },
+    "src/core.rs#anchor-4f65eabdc33602f30d52": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "fn safe_source_path(root: &Path, relative: &str, patterns: &[String]) -> Result<PathBuf> {",
+        "end_anchor": "if blocked_set(patterns)?.is_match(&normalized) {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "b7eb95d1f85203f22ca4ed9d17a58dae222cd9fee74614aee3b53eb2c323d2fa"
+    },
+    "src/core.rs#anchor-595ecf8bd5dde0af51c9": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn shortest_path(",
+        "end_anchor": "pub fn evidence_for(connection: &Connection, subject: &str) -> Result<Value> {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "a4771b58b747c2cd7873266caa9b29fb0fd0651b94da972462b06cf59d945470"
+    },
+    "src/core.rs#anchor-5e0aa28d56eedcf622a5": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "fn evidence_selector(evidence: &Evidence) -> Result<EvidenceSelector> {",
+        "end_anchor": "fn select_occurrence(",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "bb92d11485be516d17ef141ec8bb2316a838d09ebf25e248a5e8f8d2fb4b63c0"
+    },
+    "src/core.rs#anchor-5e40af9d066ec1a2135f": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "let lock = EvidenceLock {",
+        "end_anchor": "Ok(count)",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "3a437ef14c67a8dbbdf90fe776ef4a67b13b98f161fd65d4926c2e0f68cef97b"
+    },
+    "src/core.rs#anchor-61f9ef71bda19e81f78a": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn build_database(",
+        "end_anchor": "let lock = load_lock(root)?;",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "0e19e650bb34ccdce035f368f7ccfcf0f755cc12fec97602d6a7b187e3781143"
+    },
+    "src/core.rs#anchor-632229376cfd2df0bf84": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn build_database(",
+        "end_anchor": "fn build_database_at(",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "c53adff194c4f13356da15b71f8c84ea728b20c11a9a10be8d73b839c3e5743b"
+    },
+    "src/core.rs#anchor-86098de797532e5635d3": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn load_records(root: &Path, config: &Config) -> Result<Vec<LoadedRecord>> {",
+        "end_anchor": "fn relative_slash(root: &Path, path: &Path) -> Result<String> {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "2b7ac23e38fcb7681387a9ccfbd7abdbc536e23f69c7069a67cd0727aff4ae63"
+    },
+    "src/core.rs#anchor-8792978939b8509c102d": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "for path in assertion_paths(root, config)? {",
+        "end_anchor": "Ok(records)",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "b04afbd107fa3caf77d3d657df3d6a6de7a9cf30ac5e04e8101cc047cc954ea6"
+    },
+    "src/core.rs#anchor-914bf248a5d0c73a2f21": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "let path = root.join(GOLD_FILE);",
+        "end_anchor": "let gold: GoldFile = serde_json::from_slice(&fs::read(&path)?)?;",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "ecfcd515231877fe27773099afa2d7c20170d01014a00fd2c83b003ae7d81cd0"
+    },
+    "src/core.rs#anchor-9d7d49ecf5a31ab9d600": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "fn build_database_at(",
+        "end_anchor": "transaction.commit()?;",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "703bdd0b11fa5142ba24b4a29d7bccacad5f55d92b06c3f66f3d967aa5b0d7b7"
+    },
+    "src/core.rs#anchor-a77452f74a676a1b31dd": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn resolve_node(connection: &Connection, value: &str) -> Result<Value> {",
+        "end_anchor": "pub fn search(connection: &Connection, term: &str, limit: usize) -> Result<Value> {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "8617089ff22eb9ae29f7950117209e636b039216a82a412235b24d27c9ae08d1"
+    },
+    "src/core.rs#anchor-a78697a68e234675ceb8": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn write_lock(root: &Path, config: &Config, records: &[LoadedRecord]) -> Result<usize> {",
+        "end_anchor": "fn snapshot_status(snapshot: &EvidenceSnapshot, locked: Option<&LockedEvidence>) -> &'static str {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "7b177ca67a93f631429917b989e0d13c771745d47e9bf191b970c76b77ec1189"
+    },
+    "src/core.rs#anchor-b3dfcf01101635fc245a": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "let node_types: HashSet<_> = config.node_types.iter().map(String::as_str).collect();",
+        "end_anchor": "errors",
+        "start_occurrence": null,
+        "end_occurrence": 1
+      },
+      "span_sha256": "ce4289db43bd819a93c862d13f416cc26e8d647ada4b210f87d99ac7513605fb"
+    },
+    "src/core.rs#anchor-b66becd0f3282a8e5749": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "let errors = validate_records(root, config, records, true);",
+        "end_anchor": "return Err(GraphError::msg(errors.join(\"\\n\")));",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "cdc11dcc21aca09933d909cb1157656ec56610075f56c4a8fdb07db5832eab60"
+    },
+    "src/core.rs#anchor-ba1ae67e8a8aaa9c471c": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn snapshot_evidence(",
+        "end_anchor": "fn location(record: &LoadedRecord) -> String {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "f862ad8affa5dfc7bc8f64b1208a0f3c9f4e1d78c4c29fbd0d2d5c31ea5b44b3"
+    },
+    "src/core.rs#anchor-cbc4a4ec3eb58f124c05": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "let mut retrieved = HashSet::new();",
+        "end_anchor": "let status = if missing.is_empty() {",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "b841b2d68e00a0319a2dacc466f2ca43166b5179e77758ee7b0269e9cdbcff8d"
+    },
+    "src/core.rs#anchor-ccc9d0ba9ef556e7c713": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "if !REVIEWS.contains(&loaded.record.review()) {",
+        "end_anchor": "if inspect_sources {",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "90c3d81a38c3a84ef3acd93d4f8a32949d734feacd587283229bcabd6de9e9be"
+    },
+    "src/core.rs#anchor-dd64a3af7ff218bb65f7": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn connect_database(root: &Path, config: &Config) -> Result<Connection> {",
+        "end_anchor": "fn sql_value(value: rusqlite::types::ValueRef<'_>) -> Value {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "77e21c7815319b088b119783043389a61c2a4175bd0dc1100b749e78400660b7"
+    },
+    "src/core.rs#anchor-df5da8ef9196940240ab": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn audit_evidence(",
+        "end_anchor": "const SCHEMA_SQL: &str = r\"",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "aa8503921b176048069646ff18aaeb8f3baba25b7a78aed497dd029568cde7ba"
+    },
+    "src/core.rs#anchor-e0a412924f08d524bf11": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn validate_records(",
+        "end_anchor": "pub fn load_lock(root: &Path) -> Result<EvidenceLock> {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "a9a66e7ce4d73476fcdfb3de9ed72a355cced7e102d5835b40027c19007e68e1"
+    },
+    "src/core.rs#anchor-e107e4a4093cf9a03d1b": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "SELECT n.* FROM aliases a JOIN nodes n ON n.id = a.node_id",
+        "end_anchor": "WHERE a.alias = ?1 COLLATE NOCASE",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "dc862727c7d941daa4839bead0645edc6ff65af42080b7a3be2c26f4e718e229"
+    },
+    "src/core.rs#anchor-e3e3f417c298f4f9e67b": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn traverse(",
+        "end_anchor": "for _ in 0..depth {",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "74979b2088708f921bd698b60010d13eac1d724de90d0b5da3dc38927c64d9f6"
+    },
+    "src/core.rs#anchor-e5e637dcdba6be0f865f": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn shortest_path(",
+        "end_anchor": "if path.len() >= max_depth {",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "3d0ff99d21203c884c0d7385408c356fbe520298eb8976edd8e956904bc0d7f9"
+    },
+    "src/core.rs#anchor-e85bcb7b3772cc24de95": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn traverse(",
+        "end_anchor": "pub fn shortest_path(",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "9bc669a52eebc41f1ab75847c5378629fd76282c6bf1cdf0f96fe7e911bcb32f"
+    },
+    "src/core.rs#anchor-ea911817ec6b7b2f535a": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "let temp = path.with_extension(format!(\"sqlite.tmp-{}\", std::process::id()));",
+        "end_anchor": "Ok((path, counts))",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "7414dcdf499e8805f616340b1316c32a1cf4dd33d249dd66bdeeadd124841487"
+    },
+    "src/core.rs#anchor-f2144de179c5f5f61724": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "pub fn mermaid(connection: &Connection, selected: Option<&HashSet<String>>) -> Result<String> {",
+        "end_anchor": "pub fn init_project(root: &Path, name: Option<&str>) -> Result<InitializedProject> {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "eb97e7168aa81c93740a38ac354e1def38da00c5ae3be3e969ffd1c95fa82101"
+    },
+    "src/core.rs#anchor-ff5700326948b6b62587": {
+      "path": "src/core.rs",
+      "selector": {
+        "start_anchor": "let lock = load_lock(root)?;",
+        "end_anchor": "let path = database_path(root, config);",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "f78de66f3883dab5218bd20b849861c63c3ce650141e4dacec89e07dab54ed87"
+    },
+    "src/main.rs#anchor-0fd1c682d5859f7212fe": {
+      "path": "src/main.rs",
+      "selector": {
+        "start_anchor": "fn execute(cli: &Cli) -> Result<i32> {",
+        "end_anchor": "let records = load_records(&root, &config)?;",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "1ad4d4a0101df0bd2bb8ae44ff730794ba37c83ffa8d79079b768bf4ca3deffe"
+    },
+    "src/main.rs#anchor-4094d37a62d88ce6866b": {
+      "path": "src/main.rs",
+      "selector": {
+        "start_anchor": "struct Cli {",
+        "end_anchor": "enum Command {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "927000d7df50d9db9db079509b85838c7bc748ade6766dffaed52ec0100a4a75"
+    },
+    "src/main.rs#anchor-7ed192c816aee6855fbf": {
+      "path": "src/main.rs",
+      "selector": {
+        "start_anchor": "let connection = connect_database(&root, &config)?;",
+        "end_anchor": "match command {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "4459c8a3cbfd90a310c934cd126ffdaf85650c7a2cdbe4e2f955a0a20d323e61"
+    },
+    "src/main.rs#anchor-f090482e12c938160192": {
+      "path": "src/main.rs",
+      "selector": {
+        "start_anchor": "Command::Impact { node, depth } => {",
+        "end_anchor": "&traverse(&connection, node, *depth, \"both\", Some(&predicates))?",
+        "start_occurrence": 1,
+        "end_occurrence": 1
+      },
+      "span_sha256": "26b863e33d8de5014d580df76474dd47d49a0e06a8b7d79a1826db4b1871dc6a"
+    },
+    "src/main.rs#anchor-f987d0357030c6c262d3": {
+      "path": "src/main.rs",
+      "selector": {
+        "start_anchor": "let root = project_root(&cli.project)?;",
+        "end_anchor": "let records = load_records(&root, &config)?;",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "693ca7e12c854f573c4fb9eaba6708ac3786c45a7c417b5b1ab8eb2d2f897785"
+    },
+    "tests/core.rs#anchor-4522e141951792ecbf4e": {
+      "path": "tests/core.rs",
+      "selector": {
+        "start_anchor": "fn builds_queries_aliases_and_finds_paths() {",
+        "end_anchor": "fn fixture_owns_its_temporary_directory_for_the_whole_test() {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "dd77ea0aa4f56edc14853151dcb3babde0f2c0c6de1c99588d1b5233d67c5aca"
+    },
+    "tests/core.rs#anchor-650c878b81056ac418e4": {
+      "path": "tests/core.rs",
+      "selector": {
+        "start_anchor": "fn blocked_source_is_rejected() {",
+        "end_anchor": "fn gold_questions_check_bounded_retrieval() {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "cc2c455d2197e58e788352d44369d9bfe0512e1a779ad3a530b6983bf50133ad"
+    },
+    "tests/core.rs#anchor-6e5b86432e093d3f3499": {
+      "path": "tests/core.rs",
+      "selector": {
+        "start_anchor": "fn moving_an_intact_span_is_fresh_but_changing_it_is_stale() {",
+        "end_anchor": "fn missing_and_ambiguous_anchors_are_reported() {",
+        "start_occurrence": null,
+        "end_occurrence": null
+      },
+      "span_sha256": "cceffc081b74235840944763f40a3cd2a397d6c3aa74f7faa99dfa2040a9ed68"
+    }
+  }
+}
