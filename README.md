@@ -68,11 +68,11 @@ We want clients to retry serve requests when the connection drops.
 What must not break, and which test should catch a regression?
 ```
 
-The model can now answer from recorded relationships — the retry must respect
-the server-authoritative invariant, and `test:serve-round-trip` is the
-regression gate — instead of inferring couplings from a source search. Follow
-with `evidence protocol:serve` when the answer should quote the exact source
-spans.
+The model can now answer from recorded relationships in this codebase — the
+retry must respect the server-authoritative invariant, and
+`test:serve-round-trip` is the regression gate — instead of inferring
+couplings from a source search. Follow with `evidence protocol:serve` when
+the answer should quote the exact source spans.
 
 ## Install
 
