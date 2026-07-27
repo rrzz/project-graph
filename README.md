@@ -273,24 +273,28 @@ exists and when to reach for it. A paste-able block for `CLAUDE.md`,
 ## Project knowledge graph
 
 This repository has a reviewed knowledge graph. Query it with the
-`project-graph` CLI (alias `pgr = project-graph --project . --json`):
+`project-graph` CLI (run from the repository root; pass `--json` for
+compact output):
 
-- Before changing a subsystem, run `pgr impact <node>` to see what is
-  coupled to it, then `pgr evidence <node-or-edge>` to read the exact
-  source spans behind each relationship.
-- When asked "why", "where", or "what breaks if" — try `pgr query <term>`
-  and `pgr neighbors <node> --depth 2` before searching the source tree.
-- `pgr path <a> <b>` explains how two components are connected.
-- After completing a refactor, run `pgr stale`. If it reports changed
-  evidence, the graph's claims need re-review — say so in your summary.
+- Before changing a subsystem, run `project-graph impact <node>` to see
+  what is coupled to it, then `project-graph evidence <node-or-edge>` to
+  read the exact source spans behind each relationship.
+- When asked "why", "where", or "what breaks if" — try
+  `project-graph query <term>` and `project-graph neighbors <node>
+  --depth 2` before searching the source tree.
+- `project-graph path <a> <b>` explains how two components are connected.
+- After completing a refactor, run `project-graph stale`. If it reports
+  changed evidence, the graph's claims need re-review — say so in your
+  summary.
 - Trust rule: you may propose new facts only as `"review": "candidate"`
   records. Never write `"review": "reviewed"`; a human promotes candidates.
 ```
 
 Standing instructions are optional — the same commands work ad hoc in any
-prompt: "use pgr to check what depends on the serve protocol before we touch
-it", or "run pgr evidence edge:client-sends-serve and quote the span". An
-agent that can run shell commands needs nothing else installed.
+prompt: "use project-graph to check what depends on the serve protocol
+before we touch it", or "run project-graph evidence
+edge:client-sends-serve and quote the span". An agent that can run shell
+commands needs nothing else installed.
 
 Conventions that make this work well:
 
