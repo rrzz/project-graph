@@ -25,6 +25,12 @@ jobs:
           - os: windows-latest
             target: x86_64-pc-windows-msvc
             package: project-graph-x86_64-pc-windows-msvc.zip
+          - os: macos-latest
+            target: aarch64-apple-darwin
+            package: project-graph-aarch64-apple-darwin.tar.gz
+          - os: macos-latest
+            target: x86_64-apple-darwin
+            package: project-graph-x86_64-apple-darwin.tar.gz
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -38,8 +44,8 @@ jobs:
           key: release-${{ matrix.target }}
       - run: cargo build --release --locked --target ${{ matrix.target }}
 
-      - name: Package Linux
-        if: runner.os == 'Linux'
+      - name: Package Unix
+        if: runner.os != 'Windows'
         shell: bash
         run: |
           mkdir -p dist/project-graph
